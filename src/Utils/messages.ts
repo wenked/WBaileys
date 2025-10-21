@@ -597,6 +597,7 @@ export const generateWAMessageContent = async (
 
 			// @ts-ignore
 			const type = Object.keys(m)[0].replace('Message', '').toUpperCase()
+			// @ts-ignore
 			buttonsMessage.headerType = ButtonType[type]
 
 			Object.assign(buttonsMessage, m)
