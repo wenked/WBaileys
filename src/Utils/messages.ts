@@ -595,6 +595,7 @@ export const generateWAMessageContent = async (
 				buttonsMessage.contentText = message.caption
 			}
 
+			// @ts-ignore
 			const type = Object.keys(m)[0].replace('Message', '').toUpperCase()
 			buttonsMessage.headerType = ButtonType[type]
 
@@ -640,7 +641,7 @@ export const generateWAMessageContent = async (
 			buttonText: message.buttonText,
 			title: message.title,
 			footerText: message.footer,
-			description: message.text,
+			description: message.buttonText,
 			listType: proto.Message.ListMessage.ListType.SINGLE_SELECT
 		}
 
